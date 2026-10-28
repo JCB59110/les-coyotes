@@ -1,0 +1,23 @@
+
+site_name: Les Coyotes
+site_description: Fiches de chorégraphies country line dance
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+
+exclude_docs: |
+  _model-choregraphie.md
+
+theme:
+  name: mkdocs
+  language: fr
+ 
+nav:
+  - Accueil: index.md
+  - A-B-C: A-B-C/index.md
+  - D-H: D-H/index.md
+  - I-P: I-P/index.md
+  - Q-Z: Q-Z/index.md
+  - 0-9: 0-9/index.md
+  - Ressources: Ressources/index.md  
