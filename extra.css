@@ -366,3 +366,15 @@ details > :not(summary) {
   box-shadow: none !important;
 }
 
+
+/* Vidéos YouTube : adaptation automatique aux écrans */
+iframe[src*="youtube.com"],
+iframe[src*="youtube-nocookie.com"] {
+  display: block;
+  width: 100% !important;
+  max-width: 560px;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  margin: 1em auto;
+  border: 0;
+}
