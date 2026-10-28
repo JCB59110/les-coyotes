@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#49372d">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+{% endblock %}
+
+{% block content %}
+  <div class="country-banner" role="img" aria-label="Bannière country des Coyotes">
+    <div class="country-banner-inner">
+      <p class="country-banner-kicker">COUNTRY LINE DANCE</p>
+      <h1>Les Coyotes</h1>
+      <p class="country-banner-subtitle">Fiches de chorégraphies, musique et passion country</p>
+    </div>
+  </div>
+  {{ super() }}  
+{% endblock %}
+
+{% block footer %}
+
+  {% if page.file.src_path == "index.md" %}
+    <p class="last-modified">
+      Dernière modification :
+      {{ page.meta.git_revision_date_localized or "" }}
+    </p>
+  {% endif %}
+
+  <footer class="coyote-footer">
+    <p id="coyote-copyright">© 2026 Les Coyotes</p>
+    <p>
+      <a href="{{ base_url }}/Mentions-legales.html">Mentions légales</a>
+    </p>
+
+    <button id="share-button" type="button">
+      Vous avez aimé cette fiche ? Partagez-la !
+    </button>
+    <p id="share-feedback" role="status" aria-live="polite" hidden>
+      Lien copié dans le presse-papiers !
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      var year = new Date().getFullYear();
+      var copyright = document.getElementById("coyote-copyright");
+
+      if (copyright) {
+        copyright.textContent = year > 2026
+          ? "© 2026–" + year + " Les Coyotes"
+          : "© 2026 Les Coyotes";
+      }
+
+      var button = document.getElementById("share-button");
+      var feedback = document.getElementById("share-feedback");
+
+      if (button && feedback) {
+        button.addEventListener("click", async function () {
+          var shareText = document.title + " - " + window.location.href;
+
+          try {
+            if (navigator.share) {
+              await navigator.share({
+                title: document.title,
+                text: "Découvrez cette fiche des Coyotes",
+                url: window.location.href
+              });
+            } else if (navigator.clipboard && navigator.clipboard.writeText) {
+              await navigator.clipboard.writeText(shareText);
+              feedback.hidden = false;
+              feedback.textContent = "Lien copié dans le presse-papiers !";
+            } else {
+              window.prompt("Copiez ce lien pour le partager :", shareText);
+            }
+          } catch (error) {
+            if (error.name !== "AbortError") {
+              window.prompt("Copiez ce lien pour le partager :", shareText);
+            }
+          }
+        });
+      }
+    })();
+  </script>
+{% endblock %}

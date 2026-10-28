@@ -1,6 +1,7 @@
 
 site_name: Les Coyotes
 site_description: Fiches de chorégraphies country line dance
+site_url: https://jcb59110.github.io/les-coyotes/
 
 docs_dir: docs
 site_dir: site
@@ -12,6 +13,8 @@ exclude_docs: |
 theme:
   name: mkdocs
   language: fr
+  custom_dir: overrides
+  favicon: favicon.jpg
  
 nav:
   - Accueil: index.md
@@ -21,3 +24,13 @@ nav:
   - Q-Z: Q-Z/index.md
   - 0-9: 0-9/index.md
   - Ressources: Ressources/index.md  
+
+extra_css:
+  - extra.css
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      locale: fr
+      type: date
+      fallback_to_build_date: false

@@ -35,18 +35,31 @@
 - Back to the Start
 - The Man with the Hat
 
-« *Pensez à m’ajouter à la page d’accueil de votre portable.*»  
-— Jean-Claude
-
-## Menu général
-- [Chorés A-B-C](./A-B-C/index.md)
-- [Chorés D-H](./D-H/index.md)
-- [Chorés I-P](./I-P/index.md)
-- [Chorés Q-Z](./Q-Z/index.md)
-- [Chorés 0-9](./0-9/index.md)
-- [Ressources](./Ressources/index.md)
 
 
 
-Dernière mise à jour : 27 oct. 2026  
-*Site partagé aux danseurs via WhatsApp*
+<details>
+  <summary>Pensez à m’ajouter à la page d’accueil de votre portable.</summary>
+
+  <div>
+    <p>Sur iPhone ou iPad :</p>
+    <ol>
+      <li>Ouvrez le site dans Safari.</li>
+      <li>Appuyez sur le bouton Partager.</li>
+      <li>Choisissez « Sur l'écran d'accueil ».</li>
+      <li>Appuyez sur « Ajouter ».</li>
+    </ol>
+    <p>Sur Android :</p>
+    <ol>
+      <li>Ouvrez le site dans Chrome.</li>
+      <li>Appuyez sur les trois points en haut à droite.</li>
+      <li>Choisissez « Ajouter à l'écran d'accueil » ou « Installer l'application ».</li>
+      <li>Confirmez l'ajout.</li>
+    </ol>
+  </div>
+</details>
+
+<p style ="center; margin-top: 15px;">
+  <img src="./Medias/template/les-coyotes-logo.webp" alt="Texte alternatif" width="512" style="display: block; margin: 0 auto;">
+</p>
+
